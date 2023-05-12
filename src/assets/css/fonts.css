@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Merriweather Sans';
   src: local('MerriweatherSans-Light'),
   url('../../fonts/MerriweatherSans/MerriweatherSans-Light.woff') format('woff'),
   url('../../fonts/MerriweatherSans/MerriweatherSans-Light.ttf') format('truetype');
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Merriweather Sans';
   src: local('MerriweatherSans-Regular'),
   url('../../fonts/MerriweatherSans/MerriweatherSans-Regular.woff') format('woff'),
   url('../../fonts/MerriweatherSans/MerriweatherSans-Regular.ttf') format('truetype');
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Merriweather Sans';
   src: local('MerriweatherSans-Bold'),
   url('../../fonts/MerriweatherSans/MerriweatherSans-Bold.woff') format('woff'),
   url('../../fonts/MerriweatherSans/MerriweatherSans-Bold.ttf') format('truetype');
@@ -28,7 +28,7 @@
 
 
 @font-face {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Lexend Deca';
   src: local('LexendDeca-Light.ttf'),
   url('../../fonts/LexendDeca/LexendDeca-Light.woff') format('woff'),
   url('../../fonts/LexendDeca/LexendDeca-Light.ttf') format('truetype');
@@ -37,7 +37,7 @@
 }
 
 @font-face {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Lexend Deca';
   src: local('LexendDeca-Regular.ttf'),
   url('../../fonts/LexendDeca/LexendDeca-Regular.woff') format('woff'),
   url('../../fonts/LexendDeca/LexendDeca-Regular.ttf') format('truetype');
@@ -46,7 +46,7 @@
 }
 
 @font-face {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Lexend Deca';
   src: local('LexendDeca-Bold.ttf'),
   url('../../fonts/LexendDeca/LexendDeca-Bold.woff') format('woff'),
   url('../../fonts/LexendDeca/LexendDeca-Bold.ttf') format('truetype');
@@ -57,7 +57,7 @@
 
 
 @font-face {
-  font-family: 'Anime Ace 2.0 BB', sans-serif;
+  font-family: 'Anime Ace 2.0 BB';
   src: local('animeace2_0bb.ttf'),
   url('../../fonts/Animeace/animeace2_0bb.woff') format('woff'),
   url('../../fonts/Animeace/animeace2_0bb.ttf') format('truetype');
