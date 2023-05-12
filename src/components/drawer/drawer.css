@@ -1,0 +1,122 @@
+.drawerBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(216,215,208, .5);
+  transition: all .2s ease-in-out;
+}
+
+.drawerBackgroundHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1001;
+  max-width: 654px;
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--indent-m);
+  border: var(--border-width-common) solid black;
+  background-color: white;
+  overflow-y: scroll;
+  height: 100%;
+  transition: all .2s ease-in-out;
+}
+
+.drawerHidden {
+  right: -100%;
+  pointer-events: none;
+}
+
+/* Drawer form */
+.drawerForm.formMain__inner-formSection {
+  padding: 0;
+}
+
+.drawerForm .formMain__inner-formSection-form {
+  color: black;
+}
+
+.drawerForm .formMain__legend {
+  font-weight: 300;
+  font-size: var(--text-s);
+  color: var(--color-form-legend);
+  margin-bottom: var(--indent-s);
+}
+
+/* Big radio buttons */
+.drawerForm .formMain__inner-formSection-form-bigRadios-item-label {
+  border-color: black;
+}
+
+.drawerForm .formMain__inner-formSection-form-bigRadios-item-input:checked + .formMain__inner-formSection-form-bigRadios-item-label {
+  background-color: var(--button-blue);
+  border-color: var(--button-blue);
+  color: white;
+}
+
+/* Small radio buttons */
+.drawerForm .formMain__inner-formSection-form-smallRadios-col-item-input {
+  box-shadow: inset 0 0 0 6px white;
+  background-color: transparent;
+  border-color: black;
+}
+
+.drawerForm .formMain__inner-formSection-form-smallRadios-col-item-input:checked {
+  background-color: var(--background-blue);
+  box-shadow: inset 0 0 0 6px white;
+}
+
+.drawerForm .formMain__inputText {
+  background-color: var(--color-input-drawer-background);
+  border-color: black;
+  color: black;
+  font-size: var(--text-m);
+}
+
+.drawerForm .formMain__inputText::placeholder {
+  color: var(--color-footer-gray);
+}
+
+.drawerForm .formMain__inner-formSection-form-textarea {
+  background-color: var(--color-input-drawer-background);
+  border-color: black;
+  color: black;
+}
+
+.drawerForm .formMain__inner-formSection-form-textarea::placeholder {
+  color: var(--color-footer-gray);
+}
+
+.drawerForm .formMain__inner-formSection-form-submitButton {
+  background-color: var(--button-blue);
+  width: 100%;
+  max-width: unset;
+  min-height: var(--button-height-large);
+  margin-bottom: var(--indent-s);
+}
+
+.drawerForm .formMain__inner-formSection-form-endText {
+  font-size: var(--text-2xs);
+  font-weight: 300;
+}
+
+.drawerForm .formMain__inner-formSection-form-endText a {
+  text-decoration: underline;
+}
+
+.drawerForm .formMain__inner-formSection-form-endText a:hover {
+  text-decoration: none;
+}
+
+/* Delivery Date */
+.drawerForm__input-deliveryDate {
+  margin-bottom: var(--indent-m);
+}

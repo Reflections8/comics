@@ -1,0 +1,167 @@
+@import "vars.css";
+@import "fonts.css";
+
+/* Component styles */
+@import "../../components/header1/header1.css";
+@import "../../components/header2/header2.css";
+@import "../../components/intro/intro.css";
+@import "../../components/colorbox/colorbox.css";
+@import "../../components/textCells/textCells.css";
+@import "../../components/gifts/gifts.css";
+@import "../../components/formMain/formMain.css";
+@import "../../components/accordion/accordion.css";
+@import "../../components/blog/blog.css";
+@import "../../components/guide/guide.css";
+@import "../../components/ticker/ticker.css";
+@import "../../components/footer/footer.css";
+
+@import "../../components/Product/main/main.css";
+@import "../../components/Product/description/description.css";
+@import "../../components/Product/tags/tags.css";
+
+@import "../../components/drawer/drawer.css";
+
+/**/
+/* ----- Global ----- */
+/**/
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  font-family: 'Merriweather Sans', sans-serif;
+  background-color: #F4F2E8;
+  line-height: initial;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+form {
+  margin-bottom: 0;
+}
+
+input {
+  height: var(--input-height-main);
+  padding: 0 var(--indent-s);
+  background: var(--background-light-blue);
+  border: none;
+  border-bottom: var(--border-width-common) solid var(--color-input-border);
+  outline: none;
+  color: white;
+}
+
+textarea {
+  min-height: calc(var(--input-height-main) + var(--indent-xl));
+  font-family: 'Merriweather Sans', sans-serif;
+  padding: var(--indent-s) var(--indent-s) 0 var(--indent-s);
+  background: var(--background-light-blue);
+  border: none;
+  border-bottom: var(--border-width-common) solid var(--color-input-border);
+  outline: none;
+  color: white;
+  resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--color-placeholder);
+}
+
+/**/
+/* ----- Font weight ----- */
+/**/
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+/**/
+/* ----- Hidden ----- */
+/**/
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/**/
+/* ----- Container ----- */
+/**/
+/* TODO: Abandon default bootstrap container styled later, add own one, cause there is a custom grid */
+.container {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  min-height: inherit;
+}
+
+/*@media screen and (min-width: 1400px) {*/
+/*  .container {*/
+/*    max-width: 1300px;*/
+/*  }*/
+/*}*/
+
+
+/**/
+/* ----- Grid row ----- */
+/**/
+.grid-row {
+  display: grid;
+  grid-template-columns: 43% 9.5% 14% 33.5%;
+  min-height: inherit;
+}
+
+
+/**/
+/* ----- Buttons ----- */
+/**/
+button {
+  border-radius: var(--border-radius-button);
+  background-color: transparent;
+  border: var(--border-width-common) solid black;
+  outline: none;
+  cursor: pointer;
+}
+
+button a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-main {
+  font-family: 'Merriweather Sans', sans-serif;
+  min-height: var(--button-height-main);
+}

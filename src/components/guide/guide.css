@@ -1,0 +1,110 @@
+.guide {
+  margin-top: var(--indent-xl);
+}
+
+.guide__header-title {
+  grid-column: 1/5;
+  font-size: var(--h2);
+  margin-bottom: var(--indent-m);
+}
+
+.guide__header-title-row {
+  display: inline-block;
+}
+
+.guide__content .grid-row {
+  align-items: flex-start;
+}
+
+.guide__content-main {
+  grid-column: 1/2;
+}
+
+.guide__content-main-upperText {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: var(--text-l);
+  padding-bottom: var(--indent-m);
+  border-bottom: var(--border-width-common) solid black;
+  text-transform: uppercase;
+}
+
+.guide__content-main-imgSection {
+  position: relative;
+}
+
+.guide__content-main-imgSection-imgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guide__content-main-imgSection-comicsBox {
+  position: absolute;
+  left: 0;
+  top: var(--indent-s);
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Anime Ace 2.0 BB', sans-serif;
+  color: white;
+  padding: var(--indent-2xs) var(--indent-3xs);
+  border: var(--border-width-common) solid white;
+  background-color: var(--background-light-blue);
+  border-radius: var(--border-radius-rounded);
+  max-width: 285px;
+  width: 100%;
+}
+
+.guide__content-main-imgSection-imgWrapper-img {
+  padding: var(--indent-l) 0;
+}
+
+.guide__content-main-lowerText {
+  padding-top: var(--indent-s);
+  border-top: var(--border-width-common) solid black;
+  font-weight: 300;
+  font-size: var(--text-xs);
+  display: flex;
+  flex-direction: column;
+  gap: var(--indent-3xs);
+}
+
+.guide__content-listWrapper {
+  grid-column: 3/5;
+  background-color: var(--background-pale-blue);
+  padding: var(--indent-m) var(--indent-m) var(--indent-l) var(--indent-m);
+  border-radius: var(--border-radius-button);
+}
+
+.guide__content-listWrapper-title {
+  margin-bottom: var(--indent-m);
+  font-size: var(--h3);
+}
+
+.guide__content-listWrapper-ul {
+  padding: 0;
+  margin: 0 0 var(--indent-s) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--indent-s);
+  list-style-type: none;
+}
+
+.guide__content-listWrapper-ul-li-title {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: var(--text-xl);
+  text-transform: uppercase;
+}
+
+.guide__content-listWrapper-ul-li-text {
+  font-size: var(--text-s);
+}
+
+.guide__content-listWrapper-button {
+  text-transform: uppercase;
+  max-width: 300px;
+  width: 100%;
+  font-weight: 700;
+  font-size: var(--text-m);
+  display: block;
+  margin: 0 auto;
+}

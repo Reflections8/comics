@@ -1,0 +1,106 @@
+.accordion {
+  margin-top: var(--indent-xl);
+}
+
+.accordion--extraPage {
+  margin: var(--indent-l) 0;
+}
+
+.accordion__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--indent-m);
+}
+
+.accordion__wrapper--extraPage {
+  margin-top: var(--indent-m);
+}
+
+.accordion__wrapper .accordion-item {
+  border: var(--border-width-common) solid black;
+  border-radius: 0;
+}
+
+.accordion__wrapper .accordion-button {
+  padding: var(--indent-s);
+}
+
+.accordion__wrapper .accordion-button:after {
+  display: none;
+}
+
+.accordion__wrapper .accordion-body {
+  padding: 0;
+}
+
+.accordion__wrapper .accordion-body {
+  padding-right: var(--indent-m);
+  padding-bottom: var(--indent-m);
+}
+
+.accordion-button .grid-row {
+  width: 100%;
+}
+
+.accordion-button__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all .2s ease-in-out;
+}
+
+.accordion-button__icon-line:nth-child(1) {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  transition: all .2s ease-in-out;
+}
+
+.accordion-button__icon-line:nth-child(2) {
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 20px;
+  background-color: black;
+  transition: transform .2s ease-in-out, opacity .4s ease-in-out;
+}
+
+.accordion__wrapper .accordion-button:not(.collapsed) .accordion-button__icon-line:nth-child(1) {
+  transform: rotate(180deg);
+}
+
+.accordion__wrapper .accordion-button:not(.collapsed) .accordion-button__icon-line:nth-child(2) {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.accordion__wrapper .accordion-button:not(.collapsed) .accordion-button__icon {
+  background-color: var(--accordion-orange);
+}
+
+.accordion-button__title {
+  grid-column: 2/5;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: var(--text-l);
+  text-transform: uppercase;
+}
+
+.accordion-body__text {
+  grid-column: 3/5;
+}
+
+.accordion__wrapper .accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: white;
+  box-shadow: none;
+}
+.accordion__wrapper .accordion-button:focus {
+  box-shadow: none;
+}

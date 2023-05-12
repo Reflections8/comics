@@ -1,0 +1,14 @@
+:root {
+  --ticker-container-height: 1030px;
+  --ticker-animation-duration: 30s;
+}
+
+@keyframes tickerUp {
+  from {
+    top: var(--ticker-container-height);
+  }
+
+  to {
+    top: calc(var(--ticker-container-height) * -1);
+  }
+}

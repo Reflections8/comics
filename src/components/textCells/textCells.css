@@ -1,0 +1,38 @@
+.textCells {
+  margin-top: var(--indent-s);
+}
+
+.textCells__wrapper {
+  grid-column: 1/5;
+  display: flex;
+  border-bottom: var(--border-width-common) solid black;
+}
+
+.textCells__wrapper-item {
+  width: 25%;
+  border-right: var(--border-width-common) solid black;
+  padding-top: var(--indent-s);
+  padding-bottom: var(--indent-s);
+  display: flex;
+  flex-direction: column;
+  gap: var(--indent-s)
+}
+
+.textCells__wrapper-item:last-of-type {
+  border-right: none;
+}
+
+.textCells__wrapper-item-title {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: var(--text-l);
+  padding-left: var(--indent-s);
+}
+
+.textCells__wrapper-item-title span {
+  color: var(--text-medium-blue)
+}
+
+.textCells__wrapper-item-text {
+  padding-left: var(--indent-l);
+  padding-right: var(--indent-s);
+}

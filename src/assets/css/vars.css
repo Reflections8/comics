@@ -1,0 +1,93 @@
+:root {
+  /**/
+  /* ----- INDENTS ----- */
+  /**/
+  --indent-xl: 8rem; /* 128px */ /* purple */
+  --indent-l: 4.75rem; /* 76px */ /* red */
+  --indent-m: 3rem; /* 48px */ /* green */
+  --indent-s: 2rem; /* 32px */ /* blue */
+
+  --indent-xs: 1.5rem; /* 24px */
+  --indent-2xs: 1.25rem; /* 20px */
+  --indent-3xs: 1rem; /* 16px */
+  --indent-4xs: 0.625rem; /* 10px */
+
+
+  /**/
+  /* ----- FONT SIZES -----*/
+  /**/
+  --h1: 3.75rem; /* 60px */
+  --h2: 3rem; /* 48px */
+  --h3: 2.25rem; /* 36px */
+
+  --text-xl: 1.8125rem; /* 29px */
+  --text-l: 1.625rem; /* 26px */
+  --text-m: 1.25rem; /* 20px */
+  --text-s: 1.125rem; /* 18px */
+  --text-header: 1.0625rem; /* 17px */
+  --text-xs: 1rem; /* 16px */
+  --text-2xs: 0.875rem; /* 14px */
+
+
+  /**/
+  /* ----- COLORS -----*/
+  /**/
+  --root-color: #F4F2E8;
+  --header-border-light: #F3F3E8;
+  --color-input-drawer-background: #F2F2F2;
+  --color-input-border: #FEFFFF;
+  --color-footer-gray: #9E9E9E;
+  --color-dark-gray: #545454;
+  --color-form-legend: #525252;
+  --dark-brown: #2C2323;
+
+  --text-light-blue: #2c9cf2;
+  --text-medium-blue: #2481d8;
+  --button-blue: #0079D5;
+  --button-blue-2: #1978d1;
+  --background-blue: #0082DC;
+  --background-light-blue: #0098E9;
+  --background-pale-blue: #A4DAF3;
+  --color-placeholder: #96CEF2;
+
+  --text-orange: #e95221;
+  --orange: #f25a29;
+  --accordion-orange: #FF7448;
+
+  --button-red: #FF3232;
+
+
+  /**/
+  /* ----- BORDER WIDTH ----- */
+  /**/
+  --border-width-light: 1px;
+  --border-width-common: 2px;
+  --border-width-header: 3px;
+  --border-width-bold: 4px;
+
+
+  /**/
+  /* ----- BORDER RADIUS ----- */
+  /**/
+  --border-radius-rounded: 45px;
+  --border-radius-button: 13px;
+
+
+  /**/
+  /* ----- BUTTONS -----*/
+  /**/
+  --button-height-main: 3.125rem; /* 50px */
+  --button-height-large: 3.75rem; /* 60px */
+
+
+  /**/
+  /* ----- INPUTS -----*/
+  /**/
+  --input-height-main: 3.75rem; /* 60px */
+
+
+  /**/
+  /* ----- BLOG -----*/
+  /**/
+  --blog-content-height: 354px;
+}
