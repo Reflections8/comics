@@ -1,0 +1,42 @@
+[
+  {
+    "link": "#",
+    "imageSrc": "src/images/gifts__3.png",
+    "title": "1 Title from data.json file",
+    "attributes": [
+      {
+        "text": "Attribute 1"
+      },
+      {
+        "text": "Attribute 2"
+      },
+      {
+        "text": "Attribute 3"
+      },
+      {
+        "text": "Attribute 4"
+      }
+    ],
+    "buttonText": "Button text from data.json file"
+  },
+  {
+    "link": "#",
+    "imageSrc": "src/images/gifts__3.png",
+    "title": "2 Title from data.json file",
+    "attributes": [
+      {
+        "text": "Attribute 1"
+      },
+      {
+        "text": "Attribute 2"
+      },
+      {
+        "text": "Attribute 3"
+      },
+      {
+        "text": "Attribute 4"
+      }
+    ],
+    "buttonText": "Button text from data.json file"
+  }
+]

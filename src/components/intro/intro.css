@@ -15,6 +15,13 @@
 
 .intro__title-row:last-of-type {
   display: flex;
+  position: relative;
+  width: fit-content;
+}
+
+.intro__title-row-blob {
+  position: absolute;
+  right: -200px;
 }
 
 .intro__title-accent1 {
@@ -28,8 +35,8 @@
 }
 
 .intro__content-offerBox {
-  padding-top: var(--indent-l);
-  padding-bottom: var(--indent-m);
+  padding-top: var(--indent-m);
+  padding-bottom: var(--indent-s);
   border-bottom: var(--border-width-common) solid black;
 }
 
@@ -89,5 +96,6 @@
 
 .intro__imgWrapper-img {
   position: absolute;
-  left: 0;
+  left: 20px;
+  top: -90px;
 }

@@ -69,7 +69,7 @@ input {
 textarea {
   min-height: calc(var(--input-height-main) + var(--indent-xl));
   font-family: 'Merriweather Sans', sans-serif;
-  padding: var(--indent-s) var(--indent-s) 0 var(--indent-s);
+  padding: var(--indent-2xs) var(--indent-s) 0 var(--indent-s);
   background: var(--background-light-blue);
   border: none;
   border-bottom: var(--border-width-common) solid var(--color-input-border);

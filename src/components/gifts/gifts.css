@@ -43,6 +43,14 @@
   text-transform: uppercase;
 }
 
+.gifts__item-attributes-item {
+  font-weight: 300;
+}
+
+.gifts__item-attributes .gifts__item-attributes-item:last-of-type {
+  font-weight: 400;
+}
+
 .gifts__item-button {
   display: flex;
   justify-content: center;
@@ -51,6 +59,7 @@
   padding: 0 var(--indent-s);
   font-size: var(--text-m);
   width: fit-content;
+  text-transform: uppercase;
 }
 
 /* Discount button */
@@ -101,6 +110,21 @@
   padding: var(--indent-l) var(--indent-l) var(--indent-l)var(--indent-m);
   margin: var(--indent-m) 0;
   display: flex;
+}
+
+.gifts__HorizontalItemsRow-itemRendered {
+  margin-bottom: var(--indent-m);
+  margin-top: 0;
+  transform: scaleY(0);
+  transition: all .2s ease-in-out;
+}
+
+.gifts__HorizontalItemsRow-itemRenderedActive {
+  transform: scaleY(1);
+}
+
+.gifts__HorizontalItemsRow-itemRendered:last-of-type {
+  margin-bottom: 0;
 }
 
 .gifts__HorizontalItemsRow-item-img {
