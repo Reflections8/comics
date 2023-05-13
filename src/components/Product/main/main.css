@@ -37,6 +37,7 @@
 
 .Product-main__gallery-Product-main__gallery-thumbnailsSection-imgWrapper {
   width: 100%;
+  max-width: 116px;
   height: 116px;
   background-color: white;
   cursor: pointer;
