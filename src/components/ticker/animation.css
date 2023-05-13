@@ -1,14 +1,25 @@
 :root {
   --ticker-container-height: 1030px;
-  --ticker-animation-duration: 30s;
+  --ticker-animation-duration: 10s;
+  --ticker-animation-iteration: infinite;
 }
 
-@keyframes tickerUp {
-  from {
-    top: var(--ticker-container-height);
+@keyframes smallTickerAnimation {
+  0% {
+    transform: translateY(0);
   }
 
-  to {
-    top: calc(var(--ticker-container-height) * -1);
+  100% {
+    transform: translateY(-1219px);
+  }
+}
+
+@keyframes largeTickerAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-1121px);
   }
 }
