@@ -2,17 +2,64 @@ document.addEventListener('DOMContentLoaded', () => {
   const wrapper = document.querySelector('.ticker__wrapper')
   const moveContainer = document.querySelector('.ticker__wrapper-moveContainer')
 
-  const smallColumn = document.querySelectorAll('.ticker__wrapper-smallColumn-itemWrapper')
-  const largeColumn = document.querySelectorAll('.ticker__wrapper-largeColumn-itemWrapper')
+  const smallColumn = document.getElementsByClassName('ticker__wrapper-smallColumn-itemWrapper')
+  const largeColumn = document.getElementsByClassName('ticker__wrapper-largeColumn-itemWrapper')
 
+  /* Add <style> tag with dynamic animation duration based on speed */
+  const speed = 100
+
+  document.body.insertAdjacentHTML('beforeend', `
+    <style>
+        :root {
+            --small-ticker-animation-duration: ${smallColumn[0].offsetHeight / speed}s;
+            --large-ticker-animation-duration: ${largeColumn[0].offsetHeight / speed}s;
+        }
+    </style>
+  `)
+
+  /* Clone columns to make it infinite */
+  smallColumn[0].after(smallColumn[0].cloneNode(true))
+  largeColumn[0].after(largeColumn[0].cloneNode(true))
+
+
+  /* Start animation when tickers wrapper is in viewport */
   document.addEventListener('scroll', () => {
     if ((moveContainer.getBoundingClientRect().top - window.innerHeight) < -10) {
-      smallColumn.forEach(item => {
-        item.classList.add('smallTicker-Animated')
-      })
-      largeColumn.forEach(item => {
-        item.classList.add('largeTicker-Animated')
-      })
+      for (const column of smallColumn) {
+        column.classList.add('smallTicker-Animated')
+      }
+
+      for (const column of largeColumn) {
+        column.classList.add('largeTicker-Animated')
+      }
     }
+  })
+
+  /* Pause column animation when mousedown event triggers */
+  const smallColumnWrapper = document.querySelector('.ticker__wrapper-smallColumn')
+  const largeColumnWrapper = document.querySelector('.ticker__wrapper-largeColumn')
+
+  const eventListenerType = (() => navigator.maxTouchPoints ? ['touchstart', 'touchend'] : ['mousedown', 'mouseup'])()
+  eventListenerType.map(eventType => {
+    document.addEventListener(eventType, (e) => {
+
+      const thisColumn = e.target.closest('.ticker__wrapper-Column')
+      const thisColumnChildren = thisColumn?.children
+
+      if (thisColumn && eventType === ('mousedown' || 'touchstart')) {
+        for (const column of thisColumnChildren) {
+          column.classList.add('animationPaused')
+        }
+      }
+
+      if (thisColumn && eventType === ('mouseup' || 'touchend')) {
+        for (const column of thisColumnChildren) {
+          column.classList.remove('animationPaused')
+        }
+      }
+
+      // TODO: add function, that resumes animation if mouseup/touchend was not on a column element
+
+    })
   })
 })

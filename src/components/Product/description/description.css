@@ -73,7 +73,7 @@
 }
 
 .Product-description__body-text-main-tags-item {
-  border: var(--border-width-common) solid black;
+  border: var(--border-width-light) solid black;
   min-height: 40px;
   padding: 0 var(--indent-3xs);
   display: flex;

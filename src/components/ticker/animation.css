@@ -1,6 +1,5 @@
 :root {
   --ticker-container-height: 1030px;
-  --ticker-animation-duration: 10s;
   --ticker-animation-iteration: infinite;
 }
 
@@ -10,7 +9,7 @@
   }
 
   100% {
-    transform: translateY(-1219px);
+    transform: translateY(-100%);
   }
 }
 
@@ -20,6 +19,6 @@
   }
 
   100% {
-    transform: translateY(-1121px);
+    transform: translateY(-100%);
   }
 }
