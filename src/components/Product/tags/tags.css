@@ -53,3 +53,47 @@
   font-weight: 700;
   font-size: var(--text-m);
 }
+
+@media screen and (max-width: 1320px) {
+
+}
+
+@media screen and (max-width: 1160px) {
+
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .Product-tags__wrapper {
+    padding: var(--indent-m) 0;
+  }
+
+  .Products-tags__wrapper-row {
+    row-gap: var(--indent-xs)
+  }
+
+.Products-tags__wrapper-row:last-of-type {
+    justify-content: space-between;
+  }
+
+  .Product-tags__wrapper-item {
+    max-width: 48%;
+  }
+
+  .accordion--extraPage {
+    margin: var(--indent-m) 0;
+  }
+
+  .accordion--extraPage .accordion__header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Product-tags__wrapper-item {
+    min-height: 100px;
+  }
+}

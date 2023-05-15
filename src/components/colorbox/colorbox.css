@@ -31,7 +31,7 @@
 }
 
 .colorbox__inner-content-conditionText {
-  padding-left: 12px;
+  padding-left: var(--indent-4xs);
   border-left: var(--border-width-bold) solid white;
   font-family: 'Lexend Deca', sans-serif;
   max-width: 460px;
@@ -49,4 +49,37 @@
 .colorbox__inner-content-subtitle-row {
   font-weight: 300;
   font-size: var(--text-xs);
+}
+
+@media screen and (max-width: 1320px) {
+  .colorbox__inner {
+    background-position: 160% 190%, bottom;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+
+}
+
+@media screen and (max-width: 991px) {
+  .colorbox__inner {
+    background-position: 290% 100px, bottom;
+    background-size: contain, cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .colorbox__inner-content {
+    grid-column: 2/3;
+    padding-left: 0;
+  }
+
+  .colorbox__inner {
+    background-color: var(--background-blue);
+    border-radius: var(--border-radius-button);
+    color: white;
+    background-image: url("../../images/colorbox__bg-mobile.png"), url("../../images/colorbox__dotted-bg.png");
+    background-repeat: no-repeat;
+    background-position: 100% 100px, bottom;
+  }
 }

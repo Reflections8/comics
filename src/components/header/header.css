@@ -1,0 +1,23 @@
+header {
+  position: absolute;
+  transition: all .4s ease-in-out;
+  width: 100%;
+  z-index: 1000;
+}
+
+header.header__scrolled {
+  position: fixed;
+  border-bottom: var(--border-width-common) solid black;
+}
+
+header.animation {
+  animation: headerHideShow .4s 1;
+  animation-fill-mode: forwards;
+  transition: all .2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  header.header__scrolled {
+    border-bottom: 0;
+  }
+}

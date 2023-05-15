@@ -2,6 +2,7 @@
   min-height: 80px;
   font-family: 'Merriweather Sans', sans-serif;
   font-size: var(--text-s);
+  transition: all .2s ease-in-out;
 }
 
 .header2__start {
@@ -27,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: var(--indent-m);
   text-align: center;
   padding: var(--indent-4xs);
 }
@@ -45,7 +46,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 50px;
+  gap: var(--indent-m);
   padding: var(--indent-4xs);
 }
 
@@ -76,4 +77,24 @@
 .header2__linkAccent {
   font-weight: 700;
   color: var(--button-blue-2)
+}
+
+@media screen and (max-width: 1320px) {
+
+}
+
+@media screen and (max-width: 1160px) {
+
+}
+
+@media screen and (max-width: 991px) {
+  .header2 {
+    min-height: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header2 {
+    display: none;
+  }
 }

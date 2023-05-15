@@ -5,24 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const smallColumn = document.getElementsByClassName('ticker__wrapper-smallColumn-itemWrapper')
   const largeColumn = document.getElementsByClassName('ticker__wrapper-largeColumn-itemWrapper')
 
-  /* Add <style> tag with dynamic animation duration based on speed */
-  const speed = 100
-
-  document.body.insertAdjacentHTML('beforeend', `
-    <style>
-        :root {
-            --small-ticker-animation-duration: ${smallColumn[0].offsetHeight / speed}s;
-            --large-ticker-animation-duration: ${largeColumn[0].offsetHeight / speed}s;
-        }
-    </style>
-  `)
-
   /* Clone columns to make it infinite */
   smallColumn[0].after(smallColumn[0].cloneNode(true))
   largeColumn[0].after(largeColumn[0].cloneNode(true))
 
 
   /* Start animation when tickers wrapper is in viewport */
+  let speed = 100
+
   document.addEventListener('scroll', () => {
     if ((moveContainer.getBoundingClientRect().top - window.innerHeight) < -10) {
       for (const column of smallColumn) {
@@ -46,13 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const thisColumn = e.target.closest('.ticker__wrapper-Column')
       const thisColumnChildren = thisColumn?.children
 
-      if (thisColumn && eventType === ('mousedown' || 'touchstart')) {
+      if (thisColumn && eventType === 'mousedown' || thisColumn && eventType === 'touchstart') {
         for (const column of thisColumnChildren) {
           column.classList.add('animationPaused')
         }
       }
 
-      if (thisColumn && eventType === ('mouseup' || 'touchend')) {
+      if (thisColumn && eventType === 'mouseup' || thisColumn && eventType === 'touchend') {
         for (const column of thisColumnChildren) {
           column.classList.remove('animationPaused')
         }
@@ -62,4 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
   })
+
+  /* Add <style> tag with dynamic animation duration based on speed */
+  document.body.insertAdjacentHTML('beforeend', `
+    <style>
+        :root {
+            --small-ticker-animation-duration: ${smallColumn[0].offsetHeight / speed}s;
+            --large-ticker-animation-duration: ${largeColumn[0].offsetHeight / speed}s;
+        }
+    </style>
+  `)
+
 })

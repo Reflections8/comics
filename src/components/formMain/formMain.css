@@ -204,3 +204,37 @@
   font-size: var(--text-xs);
   font-weight: 300;
 }
+
+@media screen and (max-height: 1320px) {
+  .formMain__inner-imgSection-imgWrapper-comicsBox {
+    max-width: 266px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .formMain__inner-imgSection-imgWrapper-comicsBox {
+    max-width: 226px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .formMain__inner-imgSection-imgWrapper-comicsBox {
+    max-width: 176px;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .formMain__inner-imgSection {
+    display: none;
+  }
+
+  .formMain__inner-formSection {
+    grid-column: 2/3;
+    padding-right: 0;
+  }
+
+  .formMain__inner-formSection-form-submitButton {
+    width: 54%;
+  }
+}

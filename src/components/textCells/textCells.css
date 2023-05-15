@@ -26,6 +26,7 @@
   font-family: 'Lexend Deca', sans-serif;
   font-size: var(--text-l);
   padding-left: var(--indent-s);
+  padding-right: var(--indent-s);
 }
 
 .textCells__wrapper-item-title span {
@@ -35,4 +36,49 @@
 .textCells__wrapper-item-text {
   padding-left: var(--indent-l);
   padding-right: var(--indent-s);
+}
+
+@media screen and (max-width: 1320px) {
+
+}
+
+@media screen and (max-width: 1160px) {
+
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .textCells__wrapper {
+    flex-wrap: wrap;
+    border: none;
+  }
+
+  .textCells__wrapper-item {
+    width: 50%;
+    border: none;
+  }
+
+  .textCells__wrapper-item:nth-child(1) {
+    border-bottom: var(--border-width-common) solid black;
+    border-right: var(--border-width-common) solid black;
+  }
+
+  .textCells__wrapper-item:nth-child(2) {
+    border-bottom: var(--border-width-common) solid black;
+  }
+
+  .textCells__wrapper-item:nth-child(3) {
+    border-right: var(--border-width-common) solid black;
+  }
+
+  .textCells__wrapper-item-title {
+    padding: 0 6%;
+  }
+
+  .textCells__wrapper-item-text {
+    padding: 0 6%;
+  }
 }

@@ -2,8 +2,10 @@
 @import "fonts.css";
 
 /* Component styles */
+@import "../../components/header/header.css";
 @import "../../components/header1/header1.css";
 @import "../../components/header2/header2.css";
+@import "../../components/headerPopup/headerPopup.css";
 @import "../../components/intro/intro.css";
 @import "../../components/colorbox/colorbox.css";
 @import "../../components/textCells/textCells.css";
@@ -37,6 +39,7 @@ body {
   font-family: 'Merriweather Sans', sans-serif;
   background-color: #F4F2E8;
   line-height: initial;
+  overflow-x: hidden;
 }
 
 a {
@@ -116,7 +119,7 @@ input::placeholder, textarea::placeholder {
 /**/
 /* ----- Container ----- */
 /**/
-/* TODO: Abandon default bootstrap container styled later, add own one, cause there is a custom grid */
+
 .container {
   max-width: 1300px;
   width: 100%;
@@ -124,12 +127,6 @@ input::placeholder, textarea::placeholder {
   margin: 0 auto;
   min-height: inherit;
 }
-
-/*@media screen and (min-width: 1400px) {*/
-/*  .container {*/
-/*    max-width: 1300px;*/
-/*  }*/
-/*}*/
 
 
 /**/
@@ -140,7 +137,6 @@ input::placeholder, textarea::placeholder {
   grid-template-columns: 43% 9.5% 14% 33.5%;
   min-height: inherit;
 }
-
 
 /**/
 /* ----- Buttons ----- */
@@ -164,4 +160,51 @@ button a {
 .btn-main {
   font-family: 'Merriweather Sans', sans-serif;
   min-height: var(--button-height-main);
+}
+
+@media screen and (max-width: 1320px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 990px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 11px;
+  }
+
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .grid-row {
+    grid-template-columns: 6% 1fr 6%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 8px;
+  }
 }

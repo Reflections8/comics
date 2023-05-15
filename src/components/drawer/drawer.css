@@ -120,3 +120,19 @@
 .drawerForm__input-deliveryDate {
   margin-bottom: var(--indent-m);
 }
+
+@media screen and (max-width: 1320px) {
+
+}
+
+@media screen and (max-width: 1160px) {
+
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}

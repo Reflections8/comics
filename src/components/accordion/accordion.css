@@ -103,6 +103,54 @@
   background-color: white;
   box-shadow: none;
 }
+
 .accordion__wrapper .accordion-button:focus {
   box-shadow: none;
+}
+
+@media screen and (max-width: 1320px) {
+
+}
+
+@media screen and (max-width: 1160px) {
+
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .accordion__wrapper .accordion-button {
+    padding: 6%;
+  }
+
+  .accordion-button .grid-row {
+    min-height: 43px;
+  }
+
+  .accordion-button__icon {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 20px;
+    height: 20px;
+  }
+
+  .accordion-button__icon-line:nth-child(1) {
+    width: 10px;
+  }
+
+  .accordion-button__icon-line:nth-child(2) {
+    height: 10px;
+  }
+
+  .accordion-button__title {
+    grid-column: 1/3;
+    padding-right: 6%;
+  }
+
+  .accordion-body__text {
+    grid-column: 2/3;
+    padding-left: 6%;
+  }
 }

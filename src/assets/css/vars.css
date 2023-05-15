@@ -41,6 +41,8 @@
   --color-form-legend: #525252;
   --dark-brown: #2C2323;
 
+  --color-headerPopup: #f3f2e8;
+
   --text-light-blue: #2c9cf2;
   --text-medium-blue: #2481d8;
   --button-blue: #0079D5;
@@ -69,8 +71,8 @@
   /**/
   /* ----- BORDER RADIUS ----- */
   /**/
-  --border-radius-rounded: 45px;
-  --border-radius-button: 13px;
+  --border-radius-rounded: 2.8125rem;
+  --border-radius-button: 0.8125rem;
 
 
   /**/
@@ -90,4 +92,28 @@
   /* ----- BLOG -----*/
   /**/
   --blog-content-height: 354px;
+}
+
+@media screen and (max-width: 1320px) {
+
+}
+
+@media screen and (max-width: 1160px) {
+
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --h1: calc(3.25rem)
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    --h2: calc(2.5rem)
+  }
 }

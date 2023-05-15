@@ -108,3 +108,47 @@
   display: block;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 1320px) {
+
+}
+
+@media screen and (max-width: 1160px) {
+
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .guide__content-listWrapper {
+    display: none;
+  }
+
+  .guide__content-main {
+    grid-column: 1/4;
+  }
+
+  .guide__header-title {
+    padding-right: 6%;
+  }
+
+  .guide__content-main-upperText {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .guide__content-main-lowerText {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .guide__content-main-imgSection-imgWrapper-img {
+    max-width: 100%;
+  }
+
+  .guide__content-main-imgSection-comicsBox {
+    max-width: 50%;
+  }
+}
