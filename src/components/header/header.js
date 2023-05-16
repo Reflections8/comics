@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const header2Start = document.querySelector('.header2__start')
   const header2End = document.querySelector('.header2__end')
 
-  console.log(header.clientHeight)
   const main = document.querySelector('main')
   main.style.paddingTop = `${header.clientHeight}`
   window.addEventListener('resize', () => {
@@ -52,7 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   window.addEventListener('scroll', e => {
-    if (window.scrollY > 0) {
+    if (window.scrollY > header.clientHeight) {
+      header.classList.add('header__scrolled')
+      header.classList.add('animation')
 
       header2.style.backgroundColor = 'white'
       for (let child of header2Start.children) {
@@ -62,10 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
         child.style.borderBottom = '0'
       }
 
-      header.classList.add('header__scrolled')
-      header.classList.add('animation')
+      setTimeout(() => header.style.position = 'fixed', 100)
 
     } else if (window.scrollY === 0) {
+      header.style.position = 'absolute'
       header.classList.remove('header__scrolled')
       header.classList.remove('animation')
 

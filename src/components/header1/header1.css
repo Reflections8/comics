@@ -104,7 +104,7 @@
     height: 100%;
     order: 1;
     flex-grow: 1;
-    margin: 0 20px;
+    margin: 0 24px;
     border-left: var(--border-width-common) var(--header-border-light) solid;
   }
 
@@ -123,6 +123,7 @@
     gap: 4px;
     width: 20px;
     order: 0;
+    margin-left: 1rem;
   }
 
   .burgerIcon__Active .header1__burgerIcon-line:nth-child(1) {
@@ -151,10 +152,19 @@
   .header1__giftIconWrapper {
     display: block;
     order: 2;
+    margin-right: 1rem;
   }
 
   .header1__giftIconWrapper-img {
     max-width: 20px;
   }
+}
 
+@media screen and (max-width: 480px) {
+  .header1 {
+    min-height: var(--indent-xl);
+  }
+  .header1__start-logoWrapper {
+    margin: 0 18px;
+  }
 }

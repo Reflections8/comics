@@ -11,7 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* Start animation when tickers wrapper is in viewport */
-  let speed = 100
+  let speed = 50
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 768) {
+      speed = 15
+    } else {
+      speed = 50
+    }
+  })
 
   document.addEventListener('scroll', () => {
     if ((moveContainer.getBoundingClientRect().top - window.innerHeight) < -10) {

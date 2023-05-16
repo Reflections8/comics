@@ -6,7 +6,6 @@ header {
 }
 
 header.header__scrolled {
-  position: fixed;
   border-bottom: var(--border-width-common) solid black;
 }
 
@@ -17,6 +16,10 @@ header.animation {
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    z-index: 1001;
+  }
+
   header.header__scrolled {
     border-bottom: 0;
   }

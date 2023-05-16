@@ -98,6 +98,7 @@
   font-size: 1.375rem; /* 22px */
   text-transform: uppercase;
   margin-bottom: var(--indent-s);
+  pointer-events: none;
 }
 
 .ticker__wrapper-item-text {
