@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <img src=${item.imageSrc}
                  alt="comics"
-                 class="gifts__item-img gifts__HorizontalItemsRow-item-img">
+                 class="gifts__item-img gifts__item-img-Rendered gifts__HorizontalItemsRow-item-img animatedImg--Frameless">
 
             <div class="gifts__HorizontalItemsRow-item-content">
                 <div class="gifts__item-title">
@@ -48,6 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
           </a>
           `)
         })
+
+        document.querySelectorAll('.gifts__item-img-Rendered').forEach(item => {
+          setTimeout(() => item.classList.add('animatedImg--FramelessActive'), 100)
+        })
+
         showAllGiftsButton.setAttribute('style', 'display: none;')
       })
       .catch(e => {
