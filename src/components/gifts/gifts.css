@@ -20,7 +20,7 @@
 }
 
 .gifts__item:hover {
-  transform: scale(0.99);
+  transform: scale(0.95);
 }
 
 .gifts__item:hover .gifts__item-title {
@@ -43,7 +43,7 @@
 }
 
 .gifts__item-attributes {
-  margin-bottom: var(--indent-m);
+  margin-bottom: var(--indent-s);
   padding-left: var(--indent-4xs);
   border-left: var(--border-width-common) solid black;
 }
@@ -211,7 +211,7 @@
   }
 
   .gifts__item:hover {
-    transform: translateX(-50%) scale(0.99);
+    transform: translateX(-50%) scale(0.95);
   }
 
   .gifts__item-img {

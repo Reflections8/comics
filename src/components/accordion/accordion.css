@@ -9,7 +9,7 @@
 .accordion__wrapper {
   display: flex;
   flex-direction: column;
-  gap: var(--indent-m);
+  gap: var(--indent-s);
 }
 
 .accordion__wrapper--extraPage {

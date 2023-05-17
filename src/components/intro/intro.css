@@ -7,6 +7,7 @@
   grid-column: 1/5;
   font-size: var(--h1);
   font-weight: 300;
+  position: relative;
 }
 
 .intro__title-row {
@@ -21,7 +22,14 @@
 
 .intro__title-row-blob {
   position: absolute;
-  right: -200px;
+  z-index: 1;
+  bottom: -33px;
+  right: 473px;
+  max-width: 16%;
+}
+
+.intro__title-row-blob path {
+
 }
 
 .intro__title-accent1 {
@@ -109,17 +117,23 @@
 }
 
 @media screen and (max-width: 1320px) {
-
+  .intro__title-row-blob {
+    bottom: -30px;
+    right: 375px;
+  }
 }
 
 @media screen and (max-width: 1160px) {
-
+  .intro__title-row-blob {
+    bottom: -25px;
+    right: 288px;
+  }
 }
 
 @media screen and (max-width: 991px) {
   .intro__title-row-blob {
-    right: -130px;
-    max-width: 35%;
+    right: 209px;
+    bottom: -14px;
   }
 
   .intro__imgWrapper-img {

@@ -7,13 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const main = document.querySelector('main')
   main.style.paddingTop = `${header.clientHeight}`
-  window.addEventListener('resize', () => {
-    main.style.paddingTop = `${header.clientHeight}`
-  })
 
-  if (window.innerWidth <= 768) {
-    document.body.insertAdjacentHTML('beforeend', `
-    <style>
+  const addStyleTag = () => {
+    if (document.body.querySelector('.addedHeaderStyle')) {
+      document.body.querySelector('.addedHeaderStyle').remove()
+    }
+
+    if (window.innerWidth <= 768) {
+      document.body.insertAdjacentHTML('beforeend', `
+    <style class="addedHeaderStyle">
         @keyframes headerHideShow {
           0% {
             top: 0;
@@ -29,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     </style>
   `)
-  } else {
-    document.body.insertAdjacentHTML('beforeend', `
-    <style>
+    } else {
+      document.body.insertAdjacentHTML('beforeend', `
+    <style class="addedHeaderStyle">
         @keyframes headerHideShow {
           0% {
             top: 0;
@@ -47,8 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     </style>
   `)
+    }
   }
 
+  addStyleTag()
+  window.addEventListener('resize', () => {
+    main.style.paddingTop = `${header.clientHeight}`
+    addStyleTag()
+  })
 
   window.addEventListener('scroll', e => {
     if (window.scrollY > header.clientHeight) {

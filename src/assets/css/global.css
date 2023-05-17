@@ -205,6 +205,32 @@ button span {
 
 
 /**/
+/* ----- Animated images ----- */
+/**/
+.animatedImgFrame {
+  overflow: hidden;
+}
+
+.animatedImg {
+  transition: all 1.3s ease-in-out;
+}
+
+.animatedImgActive {
+  transform: scale(1.07);
+}
+
+
+.animatedImg--Frameless {
+  transition: all 1.3s ease-in-out;
+  transform: scale(0.93);
+}
+
+.animatedImg--FramelessActive {
+  transform: scale(1);
+}
+
+
+/**/
 /* ----- AOS Animation ----- */
 /**/
 
