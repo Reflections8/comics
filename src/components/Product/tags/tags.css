@@ -83,6 +83,10 @@
     max-width: 48%;
   }
 
+  .Product-tags__wrapper-item-HideMobile {
+    display: none;
+  }
+
   .accordion--extraPage {
     margin: var(--indent-m) 0;
   }

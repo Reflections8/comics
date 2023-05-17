@@ -16,6 +16,15 @@
 /* Every gift item */
 .gifts__item {
   border: var(--border-width-common) solid black;
+  transition: .2s all ease-in-out;
+}
+
+.gifts__item:hover {
+  transform: scale(0.99);
+}
+
+.gifts__item:hover .gifts__item-title {
+  color: black;
 }
 
 .gifts__item-img {
@@ -30,6 +39,7 @@
   font-size: var(--text-xl);
   text-decoration: underline;
   font-family: 'Lexend Deca', sans-serif;
+  transition: all .2s ease-in-out;
 }
 
 .gifts__item-attributes {
@@ -64,9 +74,12 @@
 
 /* Discount button */
 .gifts__item-buttonDiscount {
-  color: white;
   background-color: var(--button-red);
   border-color: var(--button-red);
+}
+
+.gifts__item-buttonDiscount span {
+  color: white;
 }
 
 .gifts__item-buttonDiscount-oldPrice {
@@ -191,10 +204,14 @@
 
   .gifts__item {
     min-height: 470px;
-    max-width: 360px;
+    max-width: 430px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .gifts__item:hover {
+    transform: translateX(-50%) scale(0.99);
   }
 
   .gifts__item-img {

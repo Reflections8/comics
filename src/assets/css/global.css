@@ -155,11 +155,52 @@ button a {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
+}
+
+button span {
+  color: black;
 }
 
 .btn-main {
   font-family: 'Merriweather Sans', sans-serif;
   min-height: var(--button-height-main);
+}
+
+/**/
+/* ----- Animated link ----- */
+/**/
+.animatedLink__wrapper {
+  transition: all .4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.animatedLink__wrapper-main {
+  position: absolute;
+  top: 0;
+}
+
+.animatedLink__wrapper-hidden {
+  position: absolute;
+  bottom: -100%;
+}
+
+.animatedLink__wrapper-fake {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.animatedLink__wrapper:hover .animatedLink__wrapper-main {
+  top: -100%;
+  transition: all .4s ease-in-out;
+}
+
+.animatedLink__wrapper:hover .animatedLink__wrapper-hidden {
+  bottom: 0;
+  transition: all .4s ease-in-out;
 }
 
 @media screen and (max-width: 1320px) {

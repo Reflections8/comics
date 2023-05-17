@@ -1,6 +1,6 @@
 header {
   position: absolute;
-  transition: all .4s ease-in-out;
+  transition: all 1s ease-in-out;
   width: 100%;
   z-index: 1000;
 }
@@ -10,9 +10,9 @@ header.header__scrolled {
 }
 
 header.animation {
-  animation: headerHideShow .4s 1;
+  animation: headerHideShow 1s 1;
   animation-fill-mode: forwards;
-  transition: all .2s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {

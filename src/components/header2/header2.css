@@ -50,10 +50,6 @@
   padding: var(--indent-4xs);
 }
 
-.header2__end-nav .header2__link:last-of-type {
-  font-weight: 700;
-}
-
 .header2__end-buttonCell {
   width: 53%;
   border-bottom: var(--border-width-common) black solid;

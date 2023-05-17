@@ -21,6 +21,7 @@
 
 .ticker__wrapper-moveContainer {
   position: relative;
+  cursor: pointer;
 }
 
 .ticker__absoluteGradientBottom {
