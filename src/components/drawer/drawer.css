@@ -19,7 +19,7 @@
   top: 0;
   right: 0;
   z-index: 1001;
-  max-width: 530px;
+  max-width: 654px;
   width: 100%;
   min-height: 100vh;
   padding: var(--indent-m);
@@ -155,7 +155,9 @@
 }
 
 @media screen and (max-width: 991px) {
-
+  .drawer {
+    max-width: 560px;
+  }
 }
 
 @media screen and (max-width: 768px) {

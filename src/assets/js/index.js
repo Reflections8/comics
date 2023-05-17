@@ -1,3 +1,5 @@
-AOS.init({
-  once: true,
-});
+document.addEventListener('DOMContentLoaded', () => {
+  AOS.init({
+    once: true,
+  });
+})

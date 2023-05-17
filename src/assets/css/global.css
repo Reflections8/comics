@@ -203,6 +203,16 @@ button span {
   transition: all .4s ease-in-out;
 }
 
+
+/**/
+/* ----- AOS Animation ----- */
+/**/
+
+/* Change fade distance */
+[data-aos=fade-up] {
+  transform: translate3d(0, 30px, 0);
+}
+
 @media screen and (max-width: 1320px) {
   html {
     font-size: 15px;
