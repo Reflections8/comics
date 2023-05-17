@@ -239,6 +239,29 @@ button span {
   transform: translate3d(0, 30px, 0);
 }
 
+
+
+/**/
+/* ----- Draw line SVG ----- */
+/**/
+
+.line-path-1 {
+  stroke-dasharray: 2600;
+  stroke-dashoffset: 2600;
+  stroke-width: 7;
+  animation: letter-animation 1.5s linear forwards;
+  animation-delay: 1000ms;
+}
+
+@keyframes letter-animation {
+  0% {
+    stroke-dashoffset: 2600;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 @media screen and (max-width: 1320px) {
   html {
     font-size: 15px;
