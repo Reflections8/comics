@@ -171,7 +171,7 @@ button span {
 /* ----- Animated link ----- */
 /**/
 .animatedLink__wrapper {
-  transition: all .4s ease-in-out;
+  transition: all .3s ease-in-out;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -195,12 +195,12 @@ button span {
 
 .animatedLink__wrapper:hover .animatedLink__wrapper-main {
   top: -100%;
-  transition: all .4s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .animatedLink__wrapper:hover .animatedLink__wrapper-hidden {
   bottom: 0;
-  transition: all .4s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 

@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const thisHTMLVideo = item.querySelector('.blog__content-item-videoWrapper-video')
       const thisCustomPlayButton = item.querySelector('.blog__content-item-videoWrapper-playButton')
 
-      if (e.target === thisCustomPlayButton) {
+      if (e.target.classList.contains('playButton')) {
         if (thisHTMLVideo.paused) {
-          thisHTMLVideo.setAttribute('controls', '')
           thisCustomPlayButton.classList.add('hidden')
+          thisHTMLVideo.setAttribute('controls', '')
           thisHTMLVideo.play()
         }
       }
