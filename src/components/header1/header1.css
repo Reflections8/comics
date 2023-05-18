@@ -1,5 +1,5 @@
 .header1 {
-  min-height: var(--indent-l);
+  min-height: 4rem;
   height: fit-content;
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@
   width: 80.5%;
   padding: var(--indent-4xs);
   font-weight: 700;
-  font-size: var(--text-header);
+  font-size: var(--text-s);
   border-right: var(--border-width-common) var(--header-border-light) solid;
   text-align: center;
 }
