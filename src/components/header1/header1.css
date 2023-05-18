@@ -70,6 +70,10 @@
   gap: 28px;
 }
 
+.header1__end-socialLinks-link-icon {
+  max-width: 24px;
+}
+
 /* Only mobile elements */
 .header1__burgerIcon, .header1__giftIconWrapper {
   display: none;
