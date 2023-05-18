@@ -38,7 +38,7 @@
   width: 80.5%;
   padding: var(--indent-4xs);
   font-weight: 700;
-  font-size: var(--text-s);
+  font-size: var(--text-header);
   border-right: var(--border-width-common) var(--header-border-light) solid;
   text-align: center;
 }
