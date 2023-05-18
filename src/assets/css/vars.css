@@ -30,6 +30,12 @@
 
 
   /**/
+  /* ----- LINE HEIGHTS -----*/
+  /**/
+  --small-text-line-height: 150%;
+
+
+  /**/
   /* ----- COLORS -----*/
   /**/
   --root-color: #F4F2E8;

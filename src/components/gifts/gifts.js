@@ -28,14 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <img src=${item.imageSrc}
                  alt="comics"
-                 class="gifts__item-img gifts__item-img-Rendered gifts__HorizontalItemsRow-item-img animatedImg--Frameless">
+                 class="gifts__item-img gifts__item-img-Rendered gifts__HorizontalItemsRow-item-img">
 
             <div class="gifts__HorizontalItemsRow-item-content">
                 <div class="gifts__item-title">
                     ${item.title}
                 </div>
 
-                <div class="gifts__item-attributes">
+                <div class="gifts__item-attributes leftBorderList">
                     ${renderAttributes()}
                 </div>
 
@@ -47,10 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </a>
           `)
-        })
-
-        document.querySelectorAll('.gifts__item-img-Rendered').forEach(item => {
-          setTimeout(() => item.classList.add('animatedImg--FramelessActive'), 100)
         })
 
         showAllGiftsButton.setAttribute('style', 'display: none;')

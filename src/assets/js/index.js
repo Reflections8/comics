@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Animated images (frameless)
   const imagesFrameless = document.querySelectorAll('.animatedImg--Frameless')
 
-  document.addEventListener('scroll', e => {
+  const triggerAnimation = () => {
     imagesInFrames.forEach(img => {
       if ((img.getBoundingClientRect().top - window.innerHeight) <= 0) {
         img.classList.add('animatedImgActive')
@@ -21,5 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         img.classList.add('animatedImg--FramelessActive')
       }
     })
-  })
+  }
+
+  triggerAnimation()
+  document.addEventListener('scroll', triggerAnimation)
 })

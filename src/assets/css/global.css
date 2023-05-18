@@ -109,6 +109,15 @@ input::placeholder, textarea::placeholder {
 }
 
 /**/
+/* ----- Line-height ----- */
+/**/
+.greaterLineHeight {
+  line-height: var(--small-text-line-height);
+}
+
+
+
+/**/
 /* ----- Hidden ----- */
 /**/
 .hidden {
@@ -126,6 +135,28 @@ input::placeholder, textarea::placeholder {
   padding: 0 15px;
   margin: 0 auto;
   min-height: inherit;
+}
+
+
+/**/
+/* ----- List with left border ----- */
+/**/
+.leftBorderList.colorbox__inner-content-conditionText {
+  line-height: 140%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--indent-4xs);
+}
+
+.leftBorderList.gifts__item-attributes {
+  line-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.leftBorderList.gifts__item-attributes .gifts__item-attributes-item:last-of-type {
+  margin-bottom: -1px;
 }
 
 
@@ -181,16 +212,19 @@ button span {
 .animatedLink__wrapper-main {
   position: absolute;
   top: 0;
+  cursor: pointer;
 }
 
 .animatedLink__wrapper-hidden {
   position: absolute;
   bottom: -100%;
+  cursor: pointer;
 }
 
 .animatedLink__wrapper-fake {
   opacity: 0;
   pointer-events: none;
+  cursor: pointer;
 }
 
 .animatedLink__wrapper:hover .animatedLink__wrapper-main {
