@@ -14,7 +14,7 @@
 .blog__header-description {
   grid-column: 4/5;
   font-size: var(--text-xs);
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .blog__content {
@@ -86,7 +86,8 @@
   position: relative;
   margin-bottom: var(--indent-s);
   overflow: hidden;
-  border-radius: var(--border-radius-button) !important;
+  border-radius: var(--border-radius-button);
+  min-height: var(--blog-content-height);
 }
 
 .blog__content-item-videoWrapper-playButton {

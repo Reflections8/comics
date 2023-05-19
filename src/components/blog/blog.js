@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (e.target.classList.contains('playButton')) {
         if (thisHTMLVideo.paused) {
+          thisHTMLVideo.setAttribute('style', '')
           thisCustomPlayButton.classList.add('hidden')
           thisPosterImg.classList.add('hidden')
           thisHTMLVideo.setAttribute('controls', '')
@@ -19,5 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
   })
+
+
+  /*  */
 
 })

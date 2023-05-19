@@ -286,7 +286,7 @@ button span {
 .line-path-1 {
   stroke-dasharray: 2600;
   stroke-dashoffset: 2600;
-  stroke-width: 7;
+  stroke-width: 3;
   animation: letter-animation 1.5s linear forwards;
   animation-delay: 1000ms;
 }
@@ -294,9 +294,23 @@ button span {
 @keyframes letter-animation {
   0% {
     stroke-dashoffset: 2600;
+    fill: rgba(255, 90, 32, 0);
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill: rgba(255, 90, 32, 0);
   }
   100% {
-    stroke-dashoffset: 0;
+    fill: rgba(255, 90, 32, 1);
+  }
+}
+
+@keyframes fill-color {
+  0% {
+    fill: none;
+  }
+  100% {
+    fill: #FF5A20;
   }
 }
 
