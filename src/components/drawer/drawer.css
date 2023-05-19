@@ -69,14 +69,22 @@
   color: black;
 }
 
+.drawerForm .formMain__inner-formSection-form-mainInputs {
+  margin-bottom: 0;
+}
+
 .drawerForm .formMain__legend {
   font-weight: 300;
   font-size: var(--text-s);
   color: var(--color-form-legend);
-  margin-bottom: var(--indent-s);
+  margin-bottom: var(--indent-2xs);
 }
 
 /* Big radio buttons */
+.drawerForm .formMain__inner-formSection-form-bigRadiosFieldset {
+  margin-bottom: var(--indent-s);
+}
+
 .drawerForm .formMain__inner-formSection-form-bigRadios-item-label {
   border-color: black;
 }
@@ -104,6 +112,7 @@
   border-color: black;
   color: black;
   font-size: var(--text-m);
+  margin-bottom: var(--indent-s);
 }
 
 .drawerForm .formMain__inputText::placeholder {
@@ -114,6 +123,7 @@
   background-color: var(--color-input-drawer-background);
   border-color: black;
   color: black;
+  margin-bottom: var(--indent-s);
 }
 
 .drawerForm .formMain__inner-formSection-form-textarea::placeholder {

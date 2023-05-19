@@ -51,7 +51,8 @@
 .Product-tags__wrapper-itemButtoned-button {
   padding: 0 var(--indent-s);
   font-weight: 700;
-  font-size: var(--text-m);
+  font-size: var(--text-s);
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1320px) {

@@ -2,8 +2,12 @@
 <? 
 
 if($_POST['name']) { $name = htmlspecialchars ($_POST['name']); }
-if($_POST['phone']) { $phone = htmlspecialchars ($_POST['phone']); }
 if($_POST['email']) { $email = htmlspecialchars ($_POST['email']); }
+
+if($_POST['comic-type']) { $comic-type = htmlspecialchars ($_POST['comic-type']); }
+if($_POST['comic-theme']) { $comic-theme = htmlspecialchars ($_POST['comic-theme']); }
+
+if($_POST['delivery-date']) { $delivery-date = htmlspecialchars ($_POST['delivery-date']); }
 
 if($_POST['comment']) { $comment = htmlspecialchars ($_POST['comment']); }
 
@@ -12,7 +16,7 @@ $site = $_SERVER['SERVER_NAME'];
 
     $to      = 'philipvictorovich1@gmail.com';
     $subject = "Заявка с сайта $site";
-    $message = "Новая заявка с сайта
+    $message = "Заявка с popup-формы.
     Имя - $name
     Телефон - $phone
     Почта - $email

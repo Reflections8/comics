@@ -673,10 +673,10 @@
 								</div>
 
 								<!-- form section -->
-								<div class="formMain__inner-formSection">
-										<form action="#"
+								<div class="formMain__inner-formSection formMain__inner-formSection">
+										<form action="src/phpHandlers/mainForm.php"
 													name="form__main"
-													class="formMain__inner-formSection-form"
+													class="formMain__inner-formSection-form mainForm"
 													novalidate>
 
 												<!-- title -->
@@ -1990,9 +1990,9 @@
 		</div>
 
 		<div class="drawerForm formMain__inner-formSection">
-				<form action="#"
+				<form action="src/phpHandlers/drawerForm.php"
 							name="form__drawer-main"
-							class="formMain__inner-formSection-form"
+							class="formMain__inner-formSection-form drawerForm__form"
 							novalidate>
 
 						<!-- title -->
@@ -2255,7 +2255,7 @@
 
 						<!-- delivery date -->
 						<input type="text"
-									 name="delivery date"
+									 name="delivery-date"
 									 class="formMain__inner-formSection-form-mainInputs-item formMain__inputText drawerForm__input-deliveryDate"
 									 placeholder="Delivery date:">
 
@@ -2267,7 +2267,7 @@
 
 						<!-- submit button -->
 						<button class="btn-main formMain__inner-formSection-form-submitButton"
-										type="button">
+										type="submit">
 								Order with a discount
 						</button>
 

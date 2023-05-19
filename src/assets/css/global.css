@@ -85,6 +85,10 @@ input::placeholder, textarea::placeholder {
   color: var(--color-placeholder);
 }
 
+.invalidInput::placeholder {
+  color: rgba(255, 0, 0, 0.78) !important;
+}
+
 /**/
 /* ----- Font weight ----- */
 /**/
@@ -327,6 +331,10 @@ button span {
 }
 
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+
   body.drawerOpened {
     height: 100vh;
     overflow-y: hidden;

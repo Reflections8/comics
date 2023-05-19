@@ -6,6 +6,10 @@
   margin: var(--indent-l) 0;
 }
 
+.accordion--extraPage .accordion__header {
+  font-size: var(--h2);
+}
+
 .accordion__wrapper {
   display: flex;
   flex-direction: column;
@@ -96,6 +100,7 @@
 
 .accordion-body__text {
   grid-column: 3/5;
+  font-weight: 300;
 }
 
 .accordion__wrapper .accordion-button:not(.collapsed) {
