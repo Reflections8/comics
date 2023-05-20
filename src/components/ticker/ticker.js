@@ -9,102 +9,102 @@ document.addEventListener('DOMContentLoaded', () => {
   smallColumn[0].after(smallColumn[0].cloneNode(true))
   largeColumn[0].after(largeColumn[0].cloneNode(true))
 
+  $('.marquee__Small').marquee({
+    allowCss3Support: true,
+    css3easing: 'linear',
+    easing: 'linear',
+    delayBeforeStart: 0,
+    direction: 'up',
+    duplicated: true,
+    duration: 150000,
+    gap: 20,
+    pauseOnCycle: false,
+    pauseOnHover: false,
+    startVisible: true,
+  });
 
-  /* Start animation when tickers wrapper is in viewport */
-  let speed = 50
-  window.addEventListener('resize', () => {
-    if (window.innerWidth <= 768) {
-      speed = 15
-    } else {
-      speed = 50
-    }
-  })
+  $('.marquee__Large').marquee({
+    allowCss3Support: true,
+    css3easing: 'linear',
+    easing: 'linear',
+    delayBeforeStart: 0,
+    direction: 'up',
+    duplicated: true,
+    duration: 150000,
+    gap: 20,
+    pauseOnCycle: false,
+    pauseOnHover: false,
+    startVisible: true,
+  });
+
+  $(".ticker__wrapper-moveContainer").draggable({
+    axis: "y"
+  });
+
+  $('.marquee__Small').marquee('pause')
+  $('.marquee__Large').marquee('pause')
 
   document.addEventListener('scroll', () => {
     if ((moveContainer.getBoundingClientRect().top - window.innerHeight) < -10) {
-      for (const column of smallColumn) {
-        column.classList.add('smallTicker-Animated')
-      }
-
-      for (const column of largeColumn) {
-        column.classList.add('largeTicker-Animated')
-      }
+      $('.marquee__Small').marquee('resume')
+      $('.marquee__Large').marquee('resume')
     }
   })
 
-  /* Click-event info */
-  let isClicked = false
-  let clickedPositionY = null
-  let topDifference = 0
-  let currentTopValue
+  const reinitMarquee = () => {
+    if (window.innerWidth <= 768) {
+      $('.marquee__Small').marquee('destroy')
+      $('.marquee__Large').marquee('destroy')
 
-  /* Pause column animation when mousedown event triggers */
+      $('.marquee__Small').marquee({
+        allowCss3Support: true,
+        css3easing: 'linear',
+        easing: 'linear',
+        delayBeforeStart: 0,
+        direction: 'up',
+        duplicated: true,
+        duration: 300000,
+        gap: 20,
+        pauseOnCycle: false,
+        pauseOnHover: false,
+        startVisible: true,
+      });
+    } else {
+      $('.marquee__Small').marquee('destroy')
+      $('.marquee__Large').marquee('destroy')
 
-  const eventListenerType = (() => navigator.maxTouchPoints ? ['touchstart', 'touchend'] : ['mousedown', 'mouseup'])()
-  eventListenerType.map(eventType => {
-    moveContainer.addEventListener(eventType, (e) => {
-      const thisColumns = moveContainer.querySelectorAll('.ticker__wrapper-Column')
+      $('.marquee__Small').marquee({
+        allowCss3Support: true,
+        css3easing: 'linear',
+        easing: 'linear',
+        delayBeforeStart: 0,
+        direction: 'up',
+        duplicated: true,
+        duration: 150000,
+        gap: 20,
+        pauseOnCycle: false,
+        pauseOnHover: false,
+        startVisible: true,
+      });
 
-      thisColumns.forEach((column) => {
-        if (eventType === 'mousedown' || eventType === 'touchstart') {
-          isClicked = true
-          clickedPositionY = e.pageY
-          for (const child of column.children) {
-            child.classList.add('animationPaused')
-          }
-        }
+      $('.marquee__Large').marquee({
+        allowCss3Support: true,
+        css3easing: 'linear',
+        easing: 'linear',
+        delayBeforeStart: 0,
+        direction: 'up',
+        duplicated: true,
+        duration: 150000,
+        gap: 20,
+        pauseOnCycle: false,
+        pauseOnHover: false,
+        startVisible: true,
+      });
+    }
+  }
 
-        if (eventType === 'mouseup' || eventType === 'touchend') {
-          isClicked = false
-          topDifference = e.pageY - clickedPositionY
-          for (const child of column.children) {
-            child.classList.remove('animationPaused')
-          }
-        }
-      })
-
-      // TODO: add function, that resumes animation if mouseup/touchend was not on a column element
-      // TODO: resolve topDifference issue (smooth drag need)
-      // TODO: try to add function, that restarts keyframe animation each time mouseup/touchend event triggers, with start position equals corrected topDifference value.
-
-    })
+  reinitMarquee()
+  window.addEventListener('resize', () => {
+    reinitMarquee()
   })
-
-  /* Add <style> tag with dynamic animation duration based on speed */
-  document.body.insertAdjacentHTML('beforeend', `
-    <style>
-        :root {
-            --small-ticker-animation-duration: ${smallColumn[0].offsetHeight / speed}s;
-            --large-ticker-animation-duration: ${largeColumn[0].offsetHeight / speed}s;
-        }
-        
-        @keyframes smallTickerAnimation {
-            0% {
-              top: 0;
-            }
-            
-            100% {
-              top: -${smallColumn[0].offsetHeight};
-            }
-        }
-
-        @keyframes largeTickerAnimation {
-            0% {
-              top: 0;
-            }
-            
-            100% {
-              top: -${largeColumn[0].offsetHeight};
-            }
-        }
-    </style>
-  `)
-
-  /* Swipe logic */
-  // moveContainer.addEventListener('mousemove', e => {
-  //   if (isClicked) {
-  //     moveContainer.style.top = `${(topDifference + (e.pageY - clickedPositionY))}px`
-  //
-  //   }
-  // })
 })
