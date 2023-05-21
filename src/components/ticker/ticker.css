@@ -22,7 +22,6 @@
 .ticker__wrapper-moveContainer {
   position: relative;
   cursor: pointer;
-  min-height: var(--ticker-container-height) !important;
 }
 
 .ticker__absoluteGradientBottom {
