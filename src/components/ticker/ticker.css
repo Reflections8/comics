@@ -85,6 +85,7 @@
   padding: var(--indent-s) var(--indent-s) var(--indent-l) var(--indent-s);
   background-color: white;
   border: var(--border-width-common) solid black;
+  word-break: break-word;
 }
 
 .ticker__wrapper-item-img {
