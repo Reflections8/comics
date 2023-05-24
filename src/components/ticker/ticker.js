@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* Start animation when tickers wrapper is in viewport */
-  let speed = 50
+  let speed = 40
   window.addEventListener('resize', () => {
     if (window.innerWidth <= 768) {
-      speed = 15
+      speed = 10
     } else {
-      speed = 50
+      speed = 40
     }
   })
 
