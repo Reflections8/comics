@@ -26,9 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
           giftsHorizontalRow.insertAdjacentHTML('beforeend', `
           <a href=${item.link} class="gifts__item gifts__HorizontalItemsRow-item gifts__HorizontalItemsRow-itemRendered gifts__HorizontalItemsRow-itemRenderedActive">
 
-            <img src=${item.imageSrc}
-                 alt="comics"
-                 class="gifts__item-img gifts__item-img-Rendered gifts__HorizontalItemsRow-item-img">
+            <div class="gifts__item-imgWrapper">
+                <img src=${item.imageSrc}
+                     alt="comics"
+                     class="gifts__item-img gifts__item-img-Rendered gifts__HorizontalItemsRow-item-img">
+            </div>
 
             <div class="gifts__HorizontalItemsRow-item-content">
                 <div class="gifts__item-title">

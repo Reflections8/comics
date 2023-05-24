@@ -210,7 +210,23 @@ button span {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow-y: clip;
+}
+
+.animatedLink__wrapperDotted {
+  position: relative;
+}
+
+.animatedLink__wrapperDotted:before {
+  content: "";
+  position: absolute;
+  left: -0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: var(--orange-dot);
 }
 
 .animatedLink__wrapper-main {
